@@ -1,0 +1,5 @@
+<div class = "margins">
+    <%= link to: user_path(@conn, :forgot) do %>
+         Forgot password?
+    <% end %>
+</div>

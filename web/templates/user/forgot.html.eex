@@ -1,0 +1,14 @@
+<div>
+  <h2>Password reset</h2>
+  <%= form_for @conn, user_path(@conn, :create), [as: :email], fn f -> %>
+    <div>
+      <%= label f, :email_to %>
+      <%= text_input f, :email_to, required: true, type: "email" %>
+      <%= error_tag f, :email_to %>
+    </div>
+
+    <div>
+      <%= submit "Send reset link" %>
+    </div>
+  <% end %>
+</div>
